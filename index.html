@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- ---bootstrap---  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- -----slick.min.css------  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- -----------slick-theme.min.css------  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box !important;
+        }
+
+        .slick-slide {
+            margin-inline: 10px;
+        }
+
+        .box {
+            height: 100px;
+            background-color: red;
+            margin-inline: 10px;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 40px;
+            display: inline-block;
+            background-color: rgb(1, 159, 67);
+            border-radius: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="responsive">
+        <div class="box">
+            <h1>1</h1>
+        </div>
+        <div class="box">
+            <h1>2</h1>
+        </div>
+        <div class="box">
+            <h1>3</h1>
+        </div>
+        <div class="box">
+            <h1>4</h1>
+        </div>
+        <div class="box">
+            <h1>5</h1>
+        </div>
+        <div class="box">
+            <h1>6</h1>
+        </div>
+        <div class="box">
+            <h1>7</h1>
+        </div>
+        <div class="box">
+            <h1>8</h1>
+        </div>
+        <div class="box">
+            <h1>9</h1>
+        </div>
+        <div class="box">
+            <h1>10</h1>
+        </div>
+
+
+    </div>
+    <div class="d-flex justify-content-center">
+        <a class="pre" href="">pre</a>
+        <a class="next ms-5" href="">next</a>
+    </div>
+
+
+    <!-- bootstrap--------  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- ------jquery.min.js--------  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- ------ slick.min.js --------  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $('.responsive').slick({
+            dots: true,
+            infinite: false,
+            speed: 300,
+            prevArrow: ".pre",
+            nextArrow: ".next",
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
+</body>
+
+</html>
